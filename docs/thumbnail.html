@@ -1,0 +1,77 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@600;700;800&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;position:relative;font-family:Inter,sans-serif;
+  background:
+    radial-gradient(900px 700px at 22% 50%, rgba(84,180,255,.20), transparent 60%),
+    radial-gradient(700px 600px at 108% 60%, rgba(232,183,112,.16), transparent 55%),
+    radial-gradient(120% 120% at 50% 50%, #0a1020, #05070c 72%);}
+#stars{position:absolute;inset:0}
+.grid{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(84,180,255,.06) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(84,180,255,.06) 1px,transparent 1px);
+  background-size:46px 46px;mask-image:radial-gradient(700px 600px at 24% 60%,#000,transparent 70%);}
+.vig{position:absolute;inset:0;box-shadow:inset 0 0 320px 80px rgba(0,0,0,.6)}
+
+/* LEFT: neon frost->sprout emblem + glass date card */
+.left{position:absolute;left:70px;top:50%;transform:translateY(-50%);width:470px;z-index:3}
+.emblem{font-size:150px;line-height:1;filter:drop-shadow(0 0 26px rgba(84,180,255,.8));}
+.arrow{font-size:54px;color:#9cc6e6;margin:0 6px;filter:drop-shadow(0 0 16px rgba(84,180,255,.7))}
+.sprout{filter:drop-shadow(0 0 26px rgba(110,231,168,.7))}
+.card{margin-top:26px;background:rgba(10,16,26,.6);border:1px solid rgba(84,180,255,.35);
+  border-radius:18px;padding:20px 26px;backdrop-filter:blur(10px);width:430px;
+  box-shadow:0 0 50px rgba(84,180,255,.22), inset 0 1px 0 rgba(255,255,255,.08)}
+.card .lbl{font:600 13px 'Geist Mono',monospace;letter-spacing:.16em;color:#9cc6e6;text-transform:uppercase}
+.card .date{font-family:Fraunces,serif;font-weight:700;font-size:58px;line-height:1;margin-top:6px;
+  background:linear-gradient(100deg,#c3e0f3,#e8b770);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card .rng{font:500 15px 'Geist Mono',monospace;color:#7c8aa0;margin-top:8px}
+
+/* RIGHT: text */
+.right{position:absolute;right:60px;top:50%;transform:translateY(-50%);width:600px;text-align:right;z-index:3}
+.kick{display:inline-block;font:700 15px 'Geist Mono',monospace;letter-spacing:.2em;color:#05070c;
+  background:#9cc6e6;padding:8px 16px;border-radius:8px;text-transform:uppercase;box-shadow:0 0 26px rgba(84,180,255,.6)}
+h1{font-family:Inter,sans-serif;font-weight:800;font-size:92px;line-height:.95;letter-spacing:-.03em;color:#eef2f6;margin:22px 0 0;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+h1 .neon{color:#8fd3ff;text-shadow:0 0 30px rgba(84,180,255,.9),0 0 60px rgba(84,180,255,.5)}
+h1 .amb{color:#e8b770;text-shadow:0 0 30px rgba(232,183,112,.8)}
+.subrow{margin-top:22px;display:flex;gap:12px;justify-content:flex-end}
+.pill{font:600 16px 'Geist Mono',monospace;color:#dbe7f2;border:1px solid rgba(84,180,255,.3);
+  border-radius:999px;padding:9px 18px;background:rgba(10,16,26,.5)}
+.pill b{color:#8fd3ff}
+.local{position:absolute;right:60px;bottom:40px;z-index:3;font:700 15px 'Geist Mono',monospace;
+  color:#05070c;background:#e8b770;padding:9px 18px;border-radius:8px;letter-spacing:.1em;box-shadow:0 0 24px rgba(232,183,112,.6)}
+.mark{position:absolute;left:70px;top:40px;z-index:3;font-family:Fraunces,serif;font-weight:600;font-size:30px;color:#eef2f6}
+.mark .w{background:linear-gradient(100deg,#c3e0f3,#e8b770);-webkit-background-clip:text;background-clip:text;color:transparent}
+</style></head>
+<body>
+<canvas id="stars"></canvas>
+<div class="grid"></div>
+<div class="vig"></div>
+<div class="mark">Frost<span class="w">Wise</span></div>
+
+<div class="left">
+  <div><span class="emblem">&#10052;&#65039;</span><span class="arrow">&#8594;</span><span class="emblem sprout">&#127793;</span></div>
+  <div class="card">
+    <div class="lbl">Last spring frost</div>
+    <div class="date">May 20</div>
+    <div class="rng">range May 15 - May 26 &middot; predicted on-device</div>
+  </div>
+</div>
+
+<div class="right">
+  <span class="kick">Open-weight AI</span>
+  <h1><span class="neon">OFFLINE</span><br>FROST<br><span class="amb">AI</span></h1>
+  <div class="subrow">
+    <span class="pill"><b>TabPFN</b> + <b>Gemma</b></span>
+    <span class="pill">no internet</span>
+  </div>
+</div>
+<div class="local">100% LOCAL &middot; $0</div>
+
+<script>
+const c=document.getElementById('stars'),x=c.getContext('2d');c.width=1280;c.height=720;
+for(let i=0;i<260;i++){const r=Math.random()*1.7+0.3,a=Math.random()*0.6+0.15;
+  x.beginPath();x.arc(Math.random()*1280,Math.random()*720,r,0,7);
+  x.fillStyle='rgba('+(Math.random()>.75?'232,183,112':'140,211,255')+','+a+')';x.fill();}
+</script>
+</body></html>
