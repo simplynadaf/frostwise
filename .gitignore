@@ -16,7 +16,7 @@ env/
 # FrostWise local artifacts
 /tmp/
 *.log
-screenshots/
+# (docs/screenshots are intentionally committed)
 
 # Node (none required, but just in case)
 node_modules/
