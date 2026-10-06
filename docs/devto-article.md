@@ -31,9 +31,17 @@ It gets people off the screen in the most literal way. The screen is the ten sec
 
 Who it is for: anyone with a patch of soil and a spotty signal. Community plots, hillside allotments, a herb bed at a trail-head cabin. The places where a cloud API is useless are exactly where people garden.
 
+![FrostWise homepage: the headline Know when the frost lets go over a soft midnight-galaxy starfield, with Plan my garden and How it works buttons](https://raw.githubusercontent.com/simplynadaf/frostwise/main/docs/screenshots/homepage.png)
+
 ## Demo
 
 Here is the full flow across three very different climates: Miami (effectively frost-free), Chicago (a real May frost), and Fargo (frost that lingers into summer). Same code, three honest answers.
+
+Here is what one answer looks like: a predicted last frost, the honest range around it, and planting advice written locally by Gemma for the exact crop.
+
+![FrostWise result for Chicago: a predicted last spring frost of May 20, likely between May 15 and May 26, with an amber advice card for tomato written locally by Gemma](https://raw.githubusercontent.com/simplynadaf/frostwise/main/docs/screenshots/02-result.png)
+
+And here is the full walkthrough across all three climates:
 
 {% embed https://www.youtube.com/watch?v=VIDEO_ID %}
 
@@ -48,6 +56,8 @@ Clone it, `python run.py`, and it is on `localhost:8077`. The first forecast cac
 ## How I Built It
 
 The whole thing is two open-weight models doing one honest job each, locally.
+
+![FrostWise architecture: the browser sends a location and crop to a local server; TabPFN-v2 forecasts the last-frost day on CPU; Gemma 3 in local Ollama turns that date into advice; a deterministic rule covers the offline fallback; nothing leaves the machine](https://raw.githubusercontent.com/simplynadaf/frostwise/main/docs/architecture.png)
 
 ### The forecast: TabPFN-v2
 
