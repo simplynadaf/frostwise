@@ -1,0 +1,1186 @@
+{
+"stations": [
+{
+"station": "Miami, FL",
+"latitude": 25.76,
+"elevation_m": 2.0,
+"feb_mean_c": 20.205000000000002,
+"mar_mean_c": 22.78,
+"winter_min_c": 6.0,
+"enso_index": -0.17149999999999999
+},
+{
+"station": "Houston, TX",
+"latitude": 29.76,
+"elevation_m": 25.0,
+"feb_mean_c": 12.735,
+"mar_mean_c": 16.985,
+"winter_min_c": -1.6350000000000002,
+"enso_index": -0.273
+},
+{
+"station": "Phoenix, AZ",
+"latitude": 33.45,
+"elevation_m": 331.0,
+"feb_mean_c": 13.84,
+"mar_mean_c": 17.68,
+"winter_min_c": 1.6600000000000001,
+"enso_index": -0.141
+},
+{
+"station": "Atlanta, GA",
+"latitude": 33.75,
+"elevation_m": 320.0,
+"feb_mean_c": 10.115,
+"mar_mean_c": 14.02,
+"winter_min_c": -4.3950000000000005,
+"enso_index": 0.1275
+},
+{
+"station": "Los Angeles, CA",
+"latitude": 34.05,
+"elevation_m": 93.0,
+"feb_mean_c": 14.3,
+"mar_mean_c": 15.190000000000001,
+"winter_min_c": 5.39,
+"enso_index": -0.327
+},
+{
+"station": "Raleigh, NC",
+"latitude": 35.78,
+"elevation_m": 134.0,
+"feb_mean_c": 7.55,
+"mar_mean_c": 12.565000000000001,
+"winter_min_c": -5.470000000000001,
+"enso_index": -0.307
+},
+{
+"station": "Nashville, TN",
+"latitude": 36.16,
+"elevation_m": 169.0,
+"feb_mean_c": 6.534999999999999,
+"mar_mean_c": 10.83,
+"winter_min_c": -6.75,
+"enso_index": 0.05500000000000001
+},
+{
+"station": "St. Louis, MO",
+"latitude": 38.63,
+"elevation_m": 142.0,
+"feb_mean_c": 2.975,
+"mar_mean_c": 8.83,
+"winter_min_c": -9.665000000000001,
+"enso_index": -0.258
+},
+{
+"station": "Kansas City, MO",
+"latitude": 39.1,
+"elevation_m": 277.0,
+"feb_mean_c": 3.1,
+"mar_mean_c": 7.925,
+"winter_min_c": -10.195,
+"enso_index": 0.2225
+},
+{
+"station": "Denver, CO",
+"latitude": 39.74,
+"elevation_m": 1609.0,
+"feb_mean_c": 1.3699999999999999,
+"mar_mean_c": 5.04,
+"winter_min_c": -14.265,
+"enso_index": -0.08349999999999999
+},
+{
+"station": "Salt Lake City, UT",
+"latitude": 40.76,
+"elevation_m": 1288.0,
+"feb_mean_c": 2.83,
+"mar_mean_c": 6.57,
+"winter_min_c": -12.925,
+"enso_index": -0.16250000000000003
+},
+{
+"station": "Chicago, IL",
+"latitude": 41.88,
+"elevation_m": 181.0,
+"feb_mean_c": -1.64,
+"mar_mean_c": 3.3049999999999997,
+"winter_min_c": -16.15,
+"enso_index": -0.03399999999999998
+},
+{
+"station": "Boston, MA",
+"latitude": 42.36,
+"elevation_m": 43.0,
+"feb_mean_c": 0.31000000000000005,
+"mar_mean_c": 4.4399999999999995,
+"winter_min_c": -11.645,
+"enso_index": -0.046000000000000006
+},
+{
+"station": "Burlington, VT",
+"latitude": 44.48,
+"elevation_m": 100.0,
+"feb_mean_c": -4.8100000000000005,
+"mar_mean_c": 0.6050000000000001,
+"winter_min_c": -18.395,
+"enso_index": -0.01049999999999999
+},
+{
+"station": "Minneapolis, MN",
+"latitude": 44.98,
+"elevation_m": 265.0,
+"feb_mean_c": -7.3,
+"mar_mean_c": 0.01499999999999999,
+"winter_min_c": -24.47,
+"enso_index": 0.2565
+},
+{
+"station": "Portland, OR",
+"latitude": 45.52,
+"elevation_m": 15.0,
+"feb_mean_c": 7.18,
+"mar_mean_c": 8.184999999999999,
+"winter_min_c": -2.875,
+"enso_index": -0.3175
+},
+{
+"station": "Billings, MT",
+"latitude": 45.78,
+"elevation_m": 950.0,
+"feb_mean_c": -1.8649999999999998,
+"mar_mean_c": 1.94,
+"winter_min_c": -17.225,
+"enso_index": 0.1685
+},
+{
+"station": "Caribou, ME",
+"latitude": 46.86,
+"elevation_m": 190.0,
+"feb_mean_c": -8.66,
+"mar_mean_c": -2.805,
+"winter_min_c": -26.330000000000002,
+"enso_index": 0.046000000000000006
+},
+{
+"station": "Fargo, ND",
+"latitude": 46.88,
+"elevation_m": 274.0,
+"feb_mean_c": -9.975,
+"mar_mean_c": -2.6399999999999997,
+"winter_min_c": -27.24,
+"enso_index": -0.27849999999999997
+},
+{
+"station": "Spokane, WA",
+"latitude": 47.66,
+"elevation_m": 576.0,
+"feb_mean_c": 0.315,
+"mar_mean_c": 5.59,
+"winter_min_c": -9.67,
+"enso_index": -0.0875
+}
+],
+"results": {
+"Miami, FL": {
+"tomato": {
+"forecast": {
+"station": "Miami, FL",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 01",
+"days_from_now": 87
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Plant your tomato seedlings after the last frost to ensure they have enough time to establish themselves before the cold temperatures arrive. Tomatoes are a tender crop, so start them indoors a few weeks before the predicted frost date.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Miami, FL",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 01",
+"days_from_now": 87
+},
+"advice": {
+"text": "Plant your peas after the last spring frost, as they are a hardy crop. Remember, the frost date is January 1st.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Miami, FL",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 01",
+"days_from_now": 87
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a vibrant harvest. Aim to plant it a few weeks before the predicted frost date for optimal growth.  Basil thrives in warm weather, so enjoy its flavor!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Houston, TX": {
+"tomato": {
+"forecast": {
+"station": "Houston, TX",
+"last_frost_date": "January 24",
+"last_frost_doy": 24,
+"range_low": "Jan 19",
+"range_high": "Jan 28",
+"days_from_now": 110
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Plant your tomato seedlings after the last frost to ensure they have enough time to develop before the cold weather arrives.  Tomato thrives in warmer temperatures, so after the frost, give them a little extra space to grow.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Houston, TX",
+"last_frost_date": "January 24",
+"last_frost_doy": 24,
+"range_low": "Jan 19",
+"range_high": "Jan 28",
+"days_from_now": 110
+},
+"advice": {
+"text": "Okay, here's your planting advice: Since the frost is predicted to be on January 24th, you can start your peas now! They\u2019ll thrive in the cooler weather, and the frost will likely be before they fully emerge.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Houston, TX",
+"last_frost_date": "January 24",
+"last_frost_doy": 24,
+"range_low": "Jan 19",
+"range_high": "Jan 28",
+"days_from_now": 110
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a successful harvest. Since the predicted frost date is January 24th, start your basil seeds indoors now for a head start.  Planting it a few weeks before the frost will give it plenty of time to mature.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Phoenix, AZ": {
+"tomato": {
+"forecast": {
+"station": "Phoenix, AZ",
+"last_frost_date": "January 04",
+"last_frost_doy": 4,
+"range_low": "Jan 01",
+"range_high": "Jan 10",
+"days_from_now": 90
+},
+"advice": {
+"text": "Okay, here's some planting advice for your tomato: Plant your tomato after the last frost, as it\u2019s a tender crop.  Since the frost date is January 4th, you can start seeds now for a good harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Phoenix, AZ",
+"last_frost_date": "January 04",
+"last_frost_doy": 4,
+"range_low": "Jan 01",
+"range_high": "Jan 10",
+"days_from_now": 90
+},
+"advice": {
+"text": "Okay, good choice! Plant your peas after the last frost, as they are a hardy crop. Frost is expected to be around January 4th, so give them plenty of time to grow.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Phoenix, AZ",
+"last_frost_date": "January 04",
+"last_frost_doy": 4,
+"range_low": "Jan 01",
+"range_high": "Jan 10",
+"days_from_now": 90
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since January 4th is a relatively early frost date, you can start it a few weeks before that to allow for a good establishment.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Atlanta, GA": {
+"tomato": {
+"forecast": {
+"station": "Atlanta, GA",
+"last_frost_date": "February 26",
+"last_frost_doy": 57,
+"range_low": "Feb 20",
+"range_high": "Mar 04",
+"days_from_now": 143
+},
+"advice": {
+"text": "Okay, here\u2019s your planting guidance: Since the frost is predicted for February 26th, start your tomato seedlings after the last frost to ensure they get a good start.  Tomatoes thrive in cooler temperatures, so planting them after the frost will give them a head start.  Good luck with your tomato harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Atlanta, GA",
+"last_frost_date": "February 26",
+"last_frost_doy": 57,
+"range_low": "Feb 20",
+"range_high": "Mar 04",
+"days_from_now": 143
+},
+"advice": {
+"text": "Okay, good choice! Plant your peas after the last frost to ensure they have time to mature. Remember, peas are tender and will benefit from a warmer period. Aim to plant them a few weeks before the predicted February 26th frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Atlanta, GA",
+"last_frost_date": "February 26",
+"last_frost_doy": 57,
+"range_low": "Feb 20",
+"range_high": "Mar 04",
+"days_from_now": 143
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since the predicted frost date is February 26th, you can start it a few weeks before that date to give it a head start.  Basil prefers warmer weather, so start it now for a beautiful summer harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Los Angeles, CA": {
+"tomato": {
+"forecast": {
+"station": "Los Angeles, CA",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 02",
+"days_from_now": 87
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost date is January 1st, start your tomato seeds indoors 6-8 weeks before the predicted frost to get a head start.  Plant them after the last frost to ensure they have time to mature before the chilly temperatures arrive!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Los Angeles, CA",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 02",
+"days_from_now": 87
+},
+"advice": {
+"text": "Okay, here's your planting guidance: Since the last frost is on January 1st, you can plant peas now! They\u2019ll thrive in the warmer temperatures and will be ready to harvest in a few weeks.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Los Angeles, CA",
+"last_frost_date": "January 01",
+"last_frost_doy": 1,
+"range_low": "Jan 01",
+"range_high": "Jan 02",
+"days_from_now": 87
+},
+"advice": {
+"text": "Basil is a tender plant and should be planted after the last frost to ensure it thrives. Since the frost date is January 01, plant it around the end of December for optimal growth. Basil prefers cool weather, so planting it during the winter will help it flourish.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Raleigh, NC": {
+"tomato": {
+"forecast": {
+"station": "Raleigh, NC",
+"last_frost_date": "March 15",
+"last_frost_doy": 74,
+"range_low": "Mar 10",
+"range_high": "Mar 20",
+"days_from_now": 160
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost is predicted to be around March 15th, it\u2019s time to get planting! Plant your tomato seedlings after the last frost to ensure they have enough time to develop before the colder temperatures arrive.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Raleigh, NC",
+"last_frost_date": "March 15",
+"last_frost_doy": 74,
+"range_low": "Mar 10",
+"range_high": "Mar 20",
+"days_from_now": 160
+},
+"advice": {
+"text": "Plant peas after the last frost, as they are hardy and thrive in warmer temperatures. Since the predicted frost date is March 15th, start your pea seeds indoors 6-8 weeks before the last frost to ensure a successful harvest.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Raleigh, NC",
+"last_frost_date": "March 15",
+"last_frost_doy": 74,
+"range_low": "Mar 10",
+"range_high": "Mar 20",
+"days_from_now": 160
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since Raleigh typically has a late spring frost, you can start it a few weeks before the predicted date for best results. Enjoy your basil!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Nashville, TN": {
+"tomato": {
+"forecast": {
+"station": "Nashville, TN",
+"last_frost_date": "March 26",
+"last_frost_doy": 85,
+"range_low": "Mar 20",
+"range_high": "Mar 31",
+"days_from_now": 171
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato! Since the frost is predicted for March 26th, start your tomato seedlings outdoors after the last frost, ensuring good drainage. Tender crops like tomatoes thrive in warmer weather, so plant them a few weeks before the predicted frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Nashville, TN",
+"last_frost_date": "March 26",
+"last_frost_doy": 85,
+"range_low": "Mar 20",
+"range_high": "Mar 31",
+"days_from_now": 171
+},
+"advice": {
+"text": "Plant your peas after the last frost, as they are a tender crop. Since the frost is predicted to be March 26th, start your seeds now for a successful harvest.  Good luck!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Nashville, TN",
+"last_frost_date": "March 26",
+"last_frost_doy": 85,
+"range_low": "Mar 20",
+"range_high": "Mar 31",
+"days_from_now": 171
+},
+"advice": {
+"text": "Basil thrives in warmer weather, so plant it after the last frost to ensure it gets enough sun. Since Nashville\u2019s last frost is March 26, plant your basil now for a successful harvest.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"St. Louis, MO": {
+"tomato": {
+"forecast": {
+"station": "St. Louis, MO",
+"last_frost_date": "April 10",
+"last_frost_doy": 100,
+"range_low": "Apr 05",
+"range_high": "Apr 15",
+"days_from_now": 186
+},
+"advice": {
+"text": "Okay, here's some planting advice for your tomato: Since the frost is predicted for April 10th, start your tomato seeds indoors 4-6 weeks before the last frost date to get a head start. Plant them outdoors after the frost is predicted to have passed, ensuring they are well-shaded.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "St. Louis, MO",
+"last_frost_date": "April 10",
+"last_frost_doy": 100,
+"range_low": "Apr 05",
+"range_high": "Apr 15",
+"days_from_now": 186
+},
+"advice": {
+"text": "Plant your peas after the last frost, as they are hardy and will thrive in the cooler weather. Since the predicted frost date is April 10, start your seeds now to ensure a successful harvest.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "St. Louis, MO",
+"last_frost_date": "April 10",
+"last_frost_doy": 100,
+"range_low": "Apr 05",
+"range_high": "Apr 15",
+"days_from_now": 186
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a good harvest. Since St. Louis\u2019s last frost is April 10th, you can start it about 4-6 weeks before that date.  Basil thrives in well-drained soil and plenty of sunshine \u2013 enjoy!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Kansas City, MO": {
+"tomato": {
+"forecast": {
+"station": "Kansas City, MO",
+"last_frost_date": "April 18",
+"last_frost_doy": 108,
+"range_low": "Apr 12",
+"range_high": "Apr 23",
+"days_from_now": 194
+},
+"advice": {
+"text": "Okay, here's some planting advice for your tomato: Since the frost is predicted for April 18th, plant your tomato seedlings now to ensure a good harvest! Tender crops like tomatoes thrive in warmer temperatures, so start them after the last frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Kansas City, MO",
+"last_frost_date": "April 18",
+"last_frost_doy": 108,
+"range_low": "Apr 12",
+"range_high": "Apr 23",
+"days_from_now": 194
+},
+"advice": {
+"text": "Okay, good choice! Peas thrive in the warmer weather after the last frost. Plant them about 2-3 weeks before April 18th for the best results.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Kansas City, MO",
+"last_frost_date": "April 18",
+"last_frost_doy": 108,
+"range_low": "Apr 12",
+"range_high": "Apr 23",
+"days_from_now": 194
+},
+"advice": {
+"text": "Basil is a tender crop and should be planted after the last frost, ideally around April 18th.  Since it\u2019s a hardy plant, you can start it a few weeks before the predicted frost date for optimal growth.  Enjoy your basil!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Denver, CO": {
+"tomato": {
+"forecast": {
+"station": "Denver, CO",
+"last_frost_date": "May 10",
+"last_frost_doy": 130,
+"range_low": "May 05",
+"range_high": "May 15",
+"days_from_now": 216
+},
+"advice": {
+"text": "Okay, here's the planting guidance for your tomato: Since the frost is predicted for May 10th, start your tomato seeds indoors 6-8 weeks before the predicted last frost date to ensure a good harvest. Plant them outdoors after the last frost to allow them to establish roots before the cooler weather arrives.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Denver, CO",
+"last_frost_date": "May 10",
+"last_frost_doy": 130,
+"range_low": "May 05",
+"range_high": "May 15",
+"days_from_now": 216
+},
+"advice": {
+"text": "Okay, great choice! Plant your peas after the last frost, as they\u2019re hardy and will thrive in the warmer weather.  Be mindful of the May 10th forecast \u2013 keep an eye on the soil temperature to ensure they get enough sun.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Denver, CO",
+"last_frost_date": "May 10",
+"last_frost_doy": 130,
+"range_low": "May 05",
+"range_high": "May 15",
+"days_from_now": 216
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since Denver\u2019s last frost is May 10th, you can start planting it about 4-6 weeks before that date.  Basil prefers soil that\u2019s moist but not soggy, so keep it watered well.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Salt Lake City, UT": {
+"tomato": {
+"forecast": {
+"station": "Salt Lake City, UT",
+"last_frost_date": "May 01",
+"last_frost_doy": 121,
+"range_low": "Apr 26",
+"range_high": "May 06",
+"days_from_now": 207
+},
+"advice": {
+"text": "Okay, here's some planting advice for your tomato: Plant your tomato after the last frost, as it\u2019s crucial for a good harvest.  Since Salt Lake City\u2019s last frost is May 1st, you can start planting now.  Tomatoes thrive in warmer weather, so give them plenty of sunlight and water.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Salt Lake City, UT",
+"last_frost_date": "May 01",
+"last_frost_doy": 121,
+"range_low": "Apr 26",
+"range_high": "May 06",
+"days_from_now": 207
+},
+"advice": {
+"text": "Plant peas after the last frost to ensure they have enough time to mature. Since the frost date is May 01, you can start them about 4-6 weeks before to give them a good start.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Salt Lake City, UT",
+"last_frost_date": "May 01",
+"last_frost_doy": 121,
+"range_low": "Apr 26",
+"range_high": "May 06",
+"days_from_now": 207
+},
+"advice": {
+"text": "Basil thrives in warmer weather, so plant it after the last frost to ensure it gets enough sun. Since Salt Lake City\u2019s last frost is May 1st, you can start planting basil around April 30th to give it a good start.  Basil prefers full sun and well-drained soil, so choose a sunny spot and amend the soil with compost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Chicago, IL": {
+"tomato": {
+"forecast": {
+"station": "Chicago, IL",
+"last_frost_date": "May 21",
+"last_frost_doy": 141,
+"range_low": "May 15",
+"range_high": "May 26",
+"days_from_now": 227
+},
+"advice": {
+"text": "Okay, here\u2019s your planting guidance for the tomato: Plant your tomato after the May 21st frost to ensure a good harvest! Tomatoes are tender crops and thrive in warmer weather, so start them after the frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Chicago, IL",
+"last_frost_date": "May 21",
+"last_frost_doy": 141,
+"range_low": "May 15",
+"range_high": "May 26",
+"days_from_now": 227
+},
+"advice": {
+"text": "Okay, great choice! Peas are perfect for Chicago! Plant them after the last frost to ensure they have time to develop before the cold. Since the frost is expected on May 21st, start your pea seeds indoors about 6-8 weeks before the predicted date.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Chicago, IL",
+"last_frost_date": "May 21",
+"last_frost_doy": 141,
+"range_low": "May 15",
+"range_high": "May 26",
+"days_from_now": 227
+},
+"advice": {
+"text": "Basil is a tender crop, so start it after the last frost to ensure it thrives. Basil prefers soil that\u2019s warm and well-drained, so plant it about 6-8 weeks before the frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Boston, MA": {
+"tomato": {
+"forecast": {
+"station": "Boston, MA",
+"last_frost_date": "May 05",
+"last_frost_doy": 125,
+"range_low": "Apr 29",
+"range_high": "May 10",
+"days_from_now": 211
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost date is May 5th, start your tomato seedlings now to ensure they have time to mature before the colder temperatures arrive. Plant them after the last frost to give them a head start.  Enjoy a bountiful harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Boston, MA",
+"last_frost_date": "May 05",
+"last_frost_doy": 125,
+"range_low": "Apr 29",
+"range_high": "May 10",
+"days_from_now": 211
+},
+"advice": {
+"text": "Plant your peas after the last frost, as they are hardy and will thrive in the warmer weather. Remember, the frost is predicted to be May 5th, so start planting now to ensure a successful harvest.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Boston, MA",
+"last_frost_date": "May 05",
+"last_frost_doy": 125,
+"range_low": "Apr 29",
+"range_high": "May 10",
+"days_from_now": 211
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a successful harvest. Since the frost is predicted to be May 5th, you can plant it a few weeks before to give it a head start. Basil thrives in warm weather, so enjoy its vibrant flavor!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Burlington, VT": {
+"tomato": {
+"forecast": {
+"station": "Burlington, VT",
+"last_frost_date": "June 06",
+"last_frost_doy": 157,
+"range_low": "May 31",
+"range_high": "Jun 12",
+"days_from_now": 243
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost is predicted for June 6th, start your tomato seedlings outdoors now to ensure they have ample time to mature before the chilly weather arrives.  Plant them after the last frost to give them a head start on the growing season.  Good luck with your tomatoes!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Burlington, VT",
+"last_frost_date": "June 06",
+"last_frost_doy": 157,
+"range_low": "May 31",
+"range_high": "Jun 12",
+"days_from_now": 243
+},
+"advice": {
+"text": "Plant your peas after the last frost, as they are a tender crop.  They\u2019ll thrive with a few weeks before the June 06th frost.  Ensure good drainage for optimal growth!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Burlington, VT",
+"last_frost_date": "June 06",
+"last_frost_doy": 157,
+"range_low": "May 31",
+"range_high": "Jun 12",
+"days_from_now": 243
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a vibrant harvest. While the frost is predicted to be around June 6th, you can start planting it a few weeks before to give it a head start. Basil thrives in warm weather, so it will appreciate a little extra sunlight!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Minneapolis, MN": {
+"tomato": {
+"forecast": {
+"station": "Minneapolis, MN",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 18",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, here's your planting guidance: Since the frost is predicted for June 19th, start your tomato seedlings after that date to give them a good start.  Tomato thrives in warmer weather, so plant them a few weeks before the predicted frost to ensure robust growth.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Minneapolis, MN",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 18",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, good choice! Peas are fantastic for Minneapolis. Plant them after the last frost, ensuring they have enough time to mature before the chilly weather arrives. Remember, peas are tender crops, so start them about 4-6 weeks before the predicted frost.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Minneapolis, MN",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 18",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure a healthy harvest. Basil prefers soil that\u2019s warm and well-drained, so it will thrive in June. Aim to plant it a few weeks before the predicted frost date to give it a little extra time to establish.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Portland, OR": {
+"tomato": {
+"forecast": {
+"station": "Portland, OR",
+"last_frost_date": "March 14",
+"last_frost_doy": 73,
+"range_low": "Mar 09",
+"range_high": "Mar 19",
+"days_from_now": 159
+},
+"advice": {
+"text": "Okay, good choice! Plant your tomato seedlings after the last frost to ensure they thrive. Hardy crops like tomatoes can be planted a few weeks before, while tender varieties like basil and squash benefit from planting a little later. Enjoy your delicious tomatoes!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Portland, OR",
+"last_frost_date": "March 14",
+"last_frost_doy": 73,
+"range_low": "Mar 09",
+"range_high": "Mar 19",
+"days_from_now": 159
+},
+"advice": {
+"text": "Plant your peas after the last frost, as they are a tender crop.  They\u2019ll thrive in the cooler weather, and they\u2019ll do best a few weeks before the predicted frost date.  Don\u2019t forget to provide them with plenty of sunlight!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Portland, OR",
+"last_frost_date": "March 14",
+"last_frost_doy": 73,
+"range_low": "Mar 09",
+"range_high": "Mar 19",
+"days_from_now": 159
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost. Since March 14th is predicted to be cool, you can start it a few weeks before that date for best results. Enjoy your basil!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Billings, MT": {
+"tomato": {
+"forecast": {
+"station": "Billings, MT",
+"last_frost_date": "June 02",
+"last_frost_doy": 153,
+"range_low": "May 27",
+"range_high": "Jun 07",
+"days_from_now": 239
+},
+"advice": {
+"text": "Okay, here\u2019s the planting guidance for your tomato: Plant your tomato after the last frost to ensure a good harvest! Tomatoes are tender crops, so wait until after the frost to maximize their growth and yield.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Billings, MT",
+"last_frost_date": "June 02",
+"last_frost_doy": 153,
+"range_low": "May 27",
+"range_high": "Jun 07",
+"days_from_now": 239
+},
+"advice": {
+"text": "Alright, let's get those peas growing! Plant your peas after the last frost, as they are a tender crop. Since the frost is predicted to be June 2nd, start them about 4-6 weeks before to give them enough time to develop.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Billings, MT",
+"last_frost_date": "June 02",
+"last_frost_doy": 153,
+"range_low": "May 27",
+"range_high": "Jun 07",
+"days_from_now": 239
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Basil prefers warmer weather, so it will do best in the next few weeks before the frost. Plant it now for a beautiful summer harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Caribou, ME": {
+"tomato": {
+"forecast": {
+"station": "Caribou, ME",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost is predicted to be June 19th, start your tomato seeds indoors 4-6 weeks before the predicted date for a good start.  Plant them outdoors after the last frost to ensure they have time to mature before winter.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Caribou, ME",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, here\u2019s the planting advice for your peas: Since the frost is predicted to be June 19th, you can plant your peas now! They\u2019ll thrive in the warmer weather and enjoy the sun.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Caribou, ME",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since the predicted last frost is June 19, you can start planting it a few weeks before to give it a head start.  Basil prefers warm weather, so choose a spot with plenty of sunlight.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Fargo, ND": {
+"tomato": {
+"forecast": {
+"station": "Fargo, ND",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your tomato: Since the frost is predicted for June 19, it\u2019s best to start your tomato seedlings outdoors after the last frost to ensure they have time to mature. Choose a sunny spot and amend the soil with compost to boost growth.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Fargo, ND",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Okay, here\u2019s some planting advice for your peas: Since the frost is predicted for June 19, start your pea seeds indoors 6-8 weeks before the predicted last frost date. They\u2019ll need a period of warm weather to germinate and grow strong.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Fargo, ND",
+"last_frost_date": "June 19",
+"last_frost_doy": 170,
+"range_low": "Jun 19",
+"range_high": "Jun 19",
+"days_from_now": 256
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the last frost to ensure it thrives. Since the frost date is June 19, start your basil seeds indoors now for a head start.  It will benefit from a sunny location and well-drained soil.",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+},
+"Spokane, WA": {
+"tomato": {
+"forecast": {
+"station": "Spokane, WA",
+"last_frost_date": "May 08",
+"last_frost_doy": 128,
+"range_low": "May 03",
+"range_high": "May 13",
+"days_from_now": 214
+},
+"advice": {
+"text": "Okay, here\u2019s your planting advice for tomato: Plant your tomato seedlings after the last frost, as the soil temperature will be warm. Since the frost is predicted for May 08, start your tomato seedlings now for a successful harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "tomato"
+},
+"peas": {
+"forecast": {
+"station": "Spokane, WA",
+"last_frost_date": "May 08",
+"last_frost_doy": 128,
+"range_low": "May 03",
+"range_high": "May 13",
+"days_from_now": 214
+},
+"advice": {
+"text": "Okay, good choice! Plant your peas after the frost, as they are a hardy crop.  Enjoy your fresh harvest!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "peas"
+},
+"basil": {
+"forecast": {
+"station": "Spokane, WA",
+"last_frost_date": "May 08",
+"last_frost_doy": 128,
+"range_low": "May 03",
+"range_high": "May 13",
+"days_from_now": 214
+},
+"advice": {
+"text": "Basil is a tender crop, so plant it after the frost date to ensure it thrives. Since Spokane\u2019s last frost is May 08, start your basil seeds indoors about 6-8 weeks before the predicted frost.  Enjoy a beautiful, flavorful basil plant!",
+"source": "gemma",
+"model": "gemma3:1b"
+},
+"plant": "basil"
+}
+}
+}
+}

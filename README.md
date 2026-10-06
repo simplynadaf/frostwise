@@ -14,14 +14,16 @@
 
 <img src="docs/cover.png" alt="FrostWise: a dark, premium planting-planner interface over a midnight-galaxy background, showing a predicted last-frost date and plain-language planting advice" width="100%"/>
 
-**🌐 Website:** [sarvarnadaf.com](https://sarvarnadaf.com) &nbsp;·&nbsp; **💻 Run it:** [Getting Started](#-getting-started) (it is an offline app by design, so you run it locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
+**🔗 Live demo:** [d2damz5gbd2rbh.cloudfront.net](https://d2damz5gbd2rbh.cloudfront.net) &nbsp;·&nbsp; **💻 Run it live:** [Getting Started](#-getting-started) (the full offline models run locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
 
 </div>
 
 > [!NOTE]
-> **No hosted link, on purpose.** FrostWise runs two open-weight models on your own
-> machine. The whole point is that it works with no server and no internet, so the "demo"
-> is cloning it and running `python run.py`. See the [2-minute walkthrough](#-what-it-looks-like) below.
+> **About the live demo.** The [hosted preview](https://d2damz5gbd2rbh.cloudfront.net) is a
+> static site (S3 + CloudFront) that serves **real, pre-computed** TabPFN-v2 + Gemma results
+> for the preset cities, so you can click through actual model output. The live models
+> themselves run on *your* machine with no server and no internet. For custom climate input,
+> fully offline, clone the repo and run `python run.py`. That is the whole point of FrostWise.
 
 > [!IMPORTANT]
 > **FrostWise is a planning aid, not a guarantee.** A last-frost date is a forecast with a

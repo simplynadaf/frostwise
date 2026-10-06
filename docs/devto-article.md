@@ -35,6 +35,10 @@ Who it is for: anyone with a patch of soil and a spotty signal. Community plots,
 
 ## Demo
 
+**Try it now:** [d2damz5gbd2rbh.cloudfront.net](https://d2damz5gbd2rbh.cloudfront.net)
+
+That hosted link is a static site (S3 plus CloudFront, near zero cost) that serves real, pre-computed TabPFN-v2 and Gemma results for the preset cities, so you can click through actual model output. The live models themselves run on your own machine. For custom climate input, fully offline, clone the repo and run `python run.py`.
+
 Here is the full flow across three very different climates: Miami (effectively frost-free), Chicago (a real May frost), and Fargo (frost that lingers into summer). Same code, three honest answers.
 
 Here is what one answer looks like: a predicted last frost, the honest range around it, and planting advice written locally by Gemma for the exact crop.
