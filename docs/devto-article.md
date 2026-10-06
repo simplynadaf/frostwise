@@ -101,6 +101,31 @@ def advise(plant, forecast):
 
 A small FastAPI server wires the two models together and serves a single-page UI (Three.js for a quiet night-sky background, no build step). The server only ever talks to `localhost`. There is no outbound call anywhere in the request path once the weights are cached.
 
+## What the Data Actually Says
+
+Once the model was fitting cleanly, I did the thing a forecast tool rarely does: I asked it what it had learned. I swept each feature across its real 10th-to-90th-percentile range and measured how many days the predicted last frost moved. Every number here is reproducible with `python scripts/analyze.py`.
+
+The result surprised me.
+
+| What changes | Realistic swing moves the last frost by |
+|---|---|
+| February mean temperature | **50 days** |
+| March mean temperature | 32 days |
+| Coldest winter night | 27 days |
+| Latitude | 24 days |
+| Elevation | 12 days |
+| El Nino / La Nina (ENSO) | 10 days |
+
+Gardeners obsess over latitude. "I'm up north, so I plant late." But in this data **a cold-versus-mild February swings your last frost more than twice as hard as how far north you are.** The month most people ignore, the dead one before anything grows, is the strongest single tell. Latitude is a slow backdrop; February is the actual signal.
+
+Two more things fell out of the sweep:
+
+**The El Nino signal is not shared equally.** I expected it to shift everyone. It barely touches the cold north: at a Fargo-like station the La Nina to El Nino swing was about 0.1 days, basically nothing. At a Houston-like station it was 8 days. The climate oscillation you hear about on the news moves the mild south and leaves the frozen north alone.
+
+**Elevation is real but modest.** At 40 degrees north, climbing from sea level to 1600 meters (think Denver) pushed the last frost about 13 days later. Real, worth knowing, but a quarter of February's pull.
+
+None of this is on a frost-date website, because those sites look up a static average by ZIP code. They cannot tell you *what moves your number*. A model you can interrogate can. That is the difference between a lookup table and something that has actually learned the shape of the problem.
+
 ## Why Does Open Innovation Matter?
 
 I kept asking: would a closed, hosted model have made this better? Every time the answer was no.
