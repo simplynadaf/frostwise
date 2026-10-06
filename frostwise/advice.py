@@ -13,7 +13,7 @@ import os
 import urllib.request
 
 OLLAMA = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
-MODEL = os.environ.get("FROSTWISE_MODEL", "gemma3:270m")
+MODEL = os.environ.get("FROSTWISE_MODEL", "gemma3:1b")
 
 
 SYSTEM = (
