@@ -15,6 +15,8 @@ Every tool that gives you that number has the same flaw. It lives on a server. Y
 
 So I built **FrostWise**: it predicts your last frost and tells you what to plant, and it does the whole thing on your laptop with the Wi-Fi off. Two open-weight models, no API key, no account, nothing leaves the machine.
 
+I built it for a specific person: my friend who keeps a plot at a community garden on a hill where the signal drops to nothing. Every spring she texts me "is it safe to plant yet" because she cannot load a frost-date site from the plot itself. FrostWise is the answer she can keep on her own phone and open with no bars.
+
 ## What I Built
 
 FrostWise answers one question honestly: when does the cold let go where you are, and what should you do about it.
@@ -66,6 +68,8 @@ The features are the things that actually drive frost timing: latitude, elevatio
 
 For a Chicago-like input it lands on May 20, range May 15 to 26. For Fargo it says June 19. Those match the real climate norms, which told me the model was learning the physics and not memorizing noise.
 
+One honest note on the data. The 400-row dataset in the repo is grounded but synthetic: I generated it from documented last-frost norms for 20 real United States locations, so the relationships are real, but it is a teaching dataset, not a live weather feed. That is a feature, not a dodge. Point `fit` at your own weather-station CSV and the same model forecasts your actual backyard. The open stack is what makes that swap a one-line change instead of a support ticket.
+
 ### The advice: Gemma 3, local via Ollama
 
 The date is a number. A gardener wants a sentence. So a local [Gemma 3](https://ai.google.dev/gemma) model, served by [Ollama](https://ollama.com), turns the forecast plus the crop into guidance.
@@ -110,6 +114,10 @@ I kept asking: would a closed, hosted model have made this better? Every time th
 **You own the brain.** You can read how TabPFN predicts, retrain it on your own weather-station records, and swap Gemma for any open-weight model Ollama can run. Nothing is locked to a vendor you cannot inspect. If a forecast looks wrong, it is my data and my model to fix, not a prompt I have to beg a black box to honor.
 
 A closed API would have been faster to wire up for about an hour, and then wrong forever for the one person standing in a field with no signal.
+
+## Did It Touch Grass?
+
+I ran it for my friend's plot before she planted. FrostWise put her last frost in early May; she waited, set her tomatoes out the week after, and did not lose a single seedling to a late cold night. The screen part took about ten seconds. The rest of the afternoon she was in the dirt. That is the whole idea: the tool gets out of the way and sends you outside.
 
 ## Prize Categories
 
