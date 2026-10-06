@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# FrostWise local artifacts
+/tmp/
+*.log
+screenshots/
+
+# Node (none required, but just in case)
+node_modules/

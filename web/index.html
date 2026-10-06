@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FrostWise - know when the frost lets go</title>
+<meta name="description" content="An offline-first planting planner. An open-weight model forecasts your last spring frost and tells you what to plant, with no internet and no account." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Nordic frost: restrained, editorial, premium */
+    --bg:#07090d;              /* near-black charcoal */
+    --bg-2:#0b0f16;
+    --ice:#9cc6e6;             /* the ONE cool accent, desaturated */
+    --ice-bright:#c3e0f3;
+    --amber:#e8b770;           /* single warm accent for the spring/result moment */
+    --amber-deep:#d99a46;
+    --paper:#eef2f6;           /* warm off-white text */
+    --muted:#7c8aa0;
+    --muted-2:#5b6678;
+    --glass:rgba(16,21,30,.6);
+    --line:rgba(156,198,230,.12);
+    --radius:18px;
+    --shadow:0 30px 80px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Inter,system-ui,sans-serif;color:var(--paper);
+    overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;
+    /* layered depth: top cool glow, bottom warm hint, over a charcoal base + vignette */
+    background:
+      radial-gradient(1200px 700px at 50% -10%, rgba(156,198,230,.10), transparent 60%),
+      radial-gradient(900px 600px at 85% 110%, rgba(232,183,112,.06), transparent 60%),
+      radial-gradient(100% 100% at 50% 50%, var(--bg-2), var(--bg) 70%);
+    background-attachment:fixed;
+  }
+  #bg{position:fixed;inset:0;z-index:0;opacity:.7;}
+  /* vignette for depth */
+  body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    box-shadow:inset 0 0 300px 60px rgba(0,0,0,.55);}
+  .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 24px;}
+  .serif{font-family:Fraunces,Georgia,serif;}
+
+  /* ---------- hero ---------- */
+  header{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ice);border:1px solid var(--line);
+    padding:8px 15px;border-radius:999px;background:rgba(16,21,30,.5);backdrop-filter:blur(8px);width:fit-content;font-weight:500;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber);animation:pulse 2.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.0;
+    letter-spacing:-.025em;margin:24px 0 0;max-width:15ch;color:var(--paper);}
+  h1 .grad{font-style:italic;background:linear-gradient(100deg,var(--ice-bright),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .sub{margin-top:24px;font-size:clamp(1.05rem,1.8vw,1.28rem);color:var(--muted);max-width:50ch;line-height:1.7;}
+  .cta-row{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn{appearance:none;border:0;cursor:pointer;font:600 15px Inter;padding:16px 28px;border-radius:12px;
+    color:#0a0d12;background:var(--ice);box-shadow:0 10px 30px rgba(156,198,230,.18);letter-spacing:.01em;
+    transition:transform .3s cubic-bezier(.32,.72,0,1),box-shadow .3s,background .3s;}
+  .btn:hover{transform:translateY(-2px);background:var(--ice-bright);box-shadow:0 16px 44px rgba(156,198,230,.3);}
+  .btn.ghost{background:transparent;color:var(--paper);border:1px solid var(--line);box-shadow:none;}
+  .btn.ghost:hover{background:rgba(156,198,230,.06);border-color:var(--ice);}
+  .badges{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;color:var(--muted-2);font-size:13.5px;}
+  .badges b{color:var(--paper);font-weight:600;}
+  .scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:var(--muted-2);font-size:11px;letter-spacing:.3em;text-transform:uppercase;}
+
+  /* ---------- sections ---------- */
+  section{padding:104px 0;position:relative;}
+  .kicker{color:var(--ice);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;}
+  h2{font-family:Fraunces,serif;font-weight:600;font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.02em;margin:14px 0 10px;}
+  .lead{color:var(--muted);max-width:58ch;font-size:1.08rem;line-height:1.7;}
+
+  /* ---------- planner card ---------- */
+  .panel{background:var(--glass);border:1px solid var(--line);border-radius:24px;backdrop-filter:blur(20px);
+    box-shadow:var(--shadow);padding:36px;margin-top:36px;}
+  .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  label{display:block;font-size:12px;color:var(--muted-2);margin:0 0 7px;font-weight:500;letter-spacing:.02em;}
+  .field{margin-bottom:18px;}
+  select,input{width:100%;background:rgba(7,9,13,.7);border:1px solid var(--line);color:var(--paper);
+    padding:13px 15px;border-radius:11px;font:500 15px Inter;outline:none;transition:border-color .2s,box-shadow .2s;}
+  select:focus,input:focus{border-color:var(--ice);box-shadow:0 0 0 3px rgba(156,198,230,.1);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+  .result{min-height:100%;display:flex;flex-direction:column;justify-content:center;}
+  .result .empty{color:var(--muted-2);text-align:center;padding:30px;line-height:1.7;}
+  .frostdate{font-family:Fraunces,serif;font-weight:600;font-size:clamp(2.6rem,5vw,3.8rem);line-height:1;
+    background:linear-gradient(100deg,var(--ice-bright),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .frostmeta{color:var(--muted);margin-top:10px;font-size:14px;}
+  .count{display:inline-block;margin-top:16px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);
+    font-size:13px;color:var(--ice);background:rgba(16,21,30,.5);}
+  .advice{margin-top:24px;padding:20px;border-radius:14px;background:rgba(232,183,112,.07);border:1px solid rgba(232,183,112,.2);}
+  .advice .who{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;display:flex;gap:8px;align-items:center;}
+  .advice p{font-size:1.04rem;color:#f3ead9;line-height:1.6;}
+  .src{margin-top:14px;font-size:11.5px;color:var(--muted-2);letter-spacing:.02em;}
+
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
+  @media(max-width:860px){.how{grid-template-columns:1fr}}
+  .card{background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);padding:28px;backdrop-filter:blur(14px);transition:border-color .3s,transform .3s;}
+  .card:hover{border-color:rgba(156,198,230,.28);transform:translateY(-3px);}
+  .card .n{font-family:Fraunces,serif;font-size:1.4rem;color:var(--ice);}
+  .card h3{margin:12px 0 8px;font-size:1.12rem;font-weight:600;}
+  .card p{color:var(--muted);font-size:.97rem;line-height:1.65;}
+
+  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;}
+  @media(max-width:860px){.why{grid-template-columns:1fr}}
+  .why .card p{color:var(--muted);}
+  .why b{color:var(--amber);font-weight:600;}
+
+  footer{position:relative;z-index:1;padding:72px 0 90px;border-top:1px solid var(--line);margin-top:44px;}
+  .foot-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;}
+  .foot-brand{font-family:Fraunces,serif;font-size:1.9rem;font-weight:600;letter-spacing:-.01em;}
+  .foot-brand .mk{background:linear-gradient(100deg,var(--ice-bright),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .foot-tag{color:var(--muted);font-size:14px;margin-top:8px;max-width:40ch;line-height:1.6;}
+  .foot-chips{display:flex;gap:10px;flex-wrap:wrap;}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--paper);
+    border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:rgba(16,21,30,.5);backdrop-filter:blur(8px);}
+  .chip .d{width:6px;height:6px;border-radius:50%;}
+  .chip .d.ice{background:var(--ice);box-shadow:0 0 10px var(--ice);}
+  .chip .d.amber{background:var(--amber);box-shadow:0 0 10px var(--amber);}
+  .foot-rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:34px 0 22px;}
+  .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted-2);font-size:12.5px;letter-spacing:.02em;}
+  .foot-bottom a{color:var(--ice);text-decoration:none;}
+  .foot-bottom a:hover{color:var(--ice-bright);}
+  .made{display:inline-flex;align-items:center;gap:5px;}
+  .made .heart{color:var(--amber);display:inline-block;animation:heartbeat 2.2s ease-in-out infinite;}
+  .made a{font-weight:600;}
+  @keyframes heartbeat{0%,100%{transform:scale(1)}10%{transform:scale(1.25)}20%{transform:scale(1)}}
+  @media(prefers-reduced-motion:reduce){.made .heart{animation:none}}
+  @media(max-width:640px){.foot-grid{align-items:flex-start}}
+  .spinner{width:18px;height:18px;border:2px solid rgba(238,242,246,.22);border-top-color:var(--ice);border-radius:50%;display:inline-block;animation:spin .7s linear infinite;vertical-align:-3px;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  /* Reveal: only hidden when JS is active AND marks the page ready; never trap content invisible. */
+  html.js-reveal .reveal{opacity:0;transform:translateY(24px);}
+  @media (prefers-reduced-motion: reduce){ html.js-reveal .reveal{opacity:1;transform:none;} }
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow reveal"><span class="dot"></span> Open-weight AI · runs offline</div>
+    <h1 class="reveal">Know when the <span class="grad">frost lets go.</span></h1>
+    <p class="sub reveal">FrostWise forecasts your last spring frost with an open-weight model and tells you what to plant, on your laptop, with no internet and no account. Put the phone down and get your hands in the soil.</p>
+    <div class="cta-row reveal">
+      <button class="btn" id="plan-btn">Plan my garden</button>
+      <a class="btn ghost" id="how-btn" href="#how">How it works</a>
+    </div>
+    <div class="scroll-hint reveal">scroll</div>
+  </header>
+
+  <section id="plan">
+    <span class="kicker reveal">The planner</span>
+    <h2 class="reveal">One honest number: your last frost.</h2>
+    <p class="lead reveal">Pick a place (or type your own climate), choose what you want to grow, and get the date the cold likely lets go, plus what to do about it.</p>
+    <div class="badges reveal">
+      <span><b>TabPFN-v2</b> forecasts the frost</span>
+      <span><b>Gemma 3</b> writes the advice</span>
+      <span><b>$0</b> to run · no API</span>
+    </div>
+
+    <div class="panel reveal">
+      <div class="grid">
+        <div>
+          <div class="field">
+            <label>Location preset</label>
+            <select id="station"></select>
+          </div>
+          <div class="field row2">
+            <div><label>Latitude</label><input id="latitude" type="number" step="0.01" value="41.88" /></div>
+            <div><label>Elevation (m)</label><input id="elevation_m" type="number" value="181" /></div>
+          </div>
+          <div class="field row2">
+            <div><label>Feb mean (°C)</label><input id="feb_mean_c" type="number" step="0.1" value="-2" /></div>
+            <div><label>Mar mean (°C)</label><input id="mar_mean_c" type="number" step="0.1" value="4" /></div>
+          </div>
+          <div class="field row2">
+            <div><label>Winter min (°C)</label><input id="winter_min_c" type="number" step="0.1" value="-16" /></div>
+            <div><label>ENSO index</label><input id="enso_index" type="number" step="0.1" value="0" /></div>
+          </div>
+          <div class="field">
+            <label>What do you want to plant?</label>
+            <input id="plant" type="text" value="tomato" placeholder="tomato, peas, basil, kale…" />
+          </div>
+          <button class="btn" id="go" style="width:100%">Forecast my frost</button>
+        </div>
+        <div class="result" id="result">
+          <div class="empty">Your frost date and planting advice will appear here.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <span class="kicker reveal">How it works</span>
+    <h2 class="reveal">Two open models, one honest answer.</h2>
+    <div class="how">
+      <div class="card reveal"><div class="n">01</div><h3>You describe your spot</h3><p>Latitude, elevation, and your late-winter temperatures. A preset fills these from real climate norms, or type your own.</p></div>
+      <div class="card reveal"><div class="n">02</div><h3>TabPFN-v2 forecasts</h3><p>An open-weight tabular foundation model predicts your last-frost day-of-year in one CPU pass, with a 10–90% range. No training, no cloud.</p></div>
+      <div class="card reveal"><div class="n">03</div><h3>Gemma writes the plan</h3><p>A local open-weight Gemma 3 model turns that date into plain-language planting guidance for your exact crop.</p></div>
+    </div>
+  </section>
+
+  <section id="why">
+    <span class="kicker reveal">Why open innovation matters</span>
+    <h2 class="reveal">The open pieces are the whole point.</h2>
+    <div class="why">
+      <div class="card reveal"><p><b>Works with no signal.</b> Both models run on your machine. On a hillside allotment with one bar of signal, a closed API is useless. FrostWise still answers.</p></div>
+      <div class="card reveal"><p><b>Your location stays yours.</b> Where you garden never leaves your laptop. No server, no account, nothing logged to someone else's cloud.</p></div>
+      <div class="card reveal"><p><b>Costs nothing to run.</b> Open weights, zero per-request fees. Run it a thousand times for a community garden and the bill is still $0.</p></div>
+      <div class="card reveal"><p><b>Swap the brain.</b> Point it at a bigger Gemma, or retrain TabPFN on your own weather station. You own the stack, not a vendor.</p></div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Frost<span class="mk">Wise</span></div>
+        <p class="foot-tag">Know when the frost lets go. An offline-first planting planner that keeps your garden off the grid.</p>
+      </div>
+      <div class="foot-chips">
+        <span class="chip"><span class="d ice"></span> TabPFN-v2 · forecast</span>
+        <span class="chip"><span class="d amber"></span> Gemma 3 · advice</span>
+        <span class="chip"><span class="d ice"></span> Runs offline · $0</span>
+      </div>
+    </div>
+    <div class="foot-rule"></div>
+    <div class="foot-bottom">
+      <span>Built for the <a href="https://dev.to/challenges/hacktoberfest-week1-2026-10-05" target="_blank" rel="noopener">Hacktoberfest Open-Source AI Challenge, Week 1: Touch Grass</a>.</span>
+      <span class="made">Made with <span class="heart">&#10084;</span> by <a href="https://sarvarnadaf.com" target="_blank" rel="noopener">Sarvar</a></span>
+    </div>
+  </footer>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="/assets/scene.js" type="module"></script>
+<script src="/assets/app.js"></script>
+</body>
+</html>
