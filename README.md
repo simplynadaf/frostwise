@@ -14,7 +14,14 @@
 
 <img src="docs/cover.png" alt="FrostWise: a dark, premium planting-planner interface over a midnight-galaxy background, showing a predicted last-frost date and plain-language planting advice" width="100%"/>
 
+**🌐 Website:** [sarvarnadaf.com](https://sarvarnadaf.com) &nbsp;·&nbsp; **💻 Run it:** [Getting Started](#-getting-started) (it is an offline app by design, so you run it locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
+
 </div>
+
+> [!NOTE]
+> **No hosted link, on purpose.** FrostWise runs two open-weight models on your own
+> machine. The whole point is that it works with no server and no internet, so the "demo"
+> is cloning it and running `python run.py`. See the [2-minute walkthrough](#-what-it-looks-like) below.
 
 > [!IMPORTANT]
 > **FrostWise is a planning aid, not a guarantee.** A last-frost date is a forecast with a
@@ -87,15 +94,19 @@ Both models run on your machine. There is no API key, no account, and no request
 
 ## 📸 What it looks like
 
+### The homepage
+<div align="center">
+<img src="docs/screenshots/homepage.png" alt="FrostWise homepage: the headline Know when the frost lets go over a soft midnight-galaxy starfield, with Plan my garden and How it works buttons" width="100%"/>
+</div>
+
 ### The one date, with its range, and local planting advice
 <div align="center">
 <img src="docs/screenshots/02-result.png" alt="FrostWise result for Chicago: a predicted last spring frost of May 21, likely between May 15 and May 26, 227 days from today, and an amber advice card for tomato written locally by Gemma" width="100%"/>
 </div>
 
-### A clean single-screen landing over a midnight-galaxy background
-<div align="center">
-<img src="docs/screenshots/01-hero.png" alt="FrostWise hero: Know when the frost lets go, over a soft starfield, with Plan my garden and How it works buttons" width="100%"/>
-</div>
+### 🎬 Full walkthrough (YouTube)
+A 2-minute demo running three real forecasts (Miami, Chicago, Fargo) fully offline is
+**coming soon**. The source video is in the repo at [`docs/demo.mp4`](docs/demo.mp4).
 
 ---
 
