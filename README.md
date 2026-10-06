@@ -211,9 +211,9 @@ frostwise/
 ├── data/
 │   └── frost_history.csv    # 20 US stations x 20 years of last-frost climatology
 ├── scripts/
-│   ├── build_dataset.py     # regenerate the dataset
-│   ├── serve.sh             # dev launcher
-│   └── screenshot.py        # dev-only visual QA
+│   ├── build_dataset.py     # regenerate the climate dataset
+│   ├── analyze.py           # reproduce the "what moves your frost" finding
+│   └── serve.sh             # dev launcher
 ├── docs/                    # cover, architecture diagram, screenshots
 ├── run.py                   # one command to run everything
 ├── requirements.txt
