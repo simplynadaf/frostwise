@@ -115,6 +115,19 @@ I kept asking: would a closed, hosted model have made this better? Every time th
 
 A closed API would have been faster to wire up for about an hour, and then wrong forever for the one person standing in a field with no signal.
 
+## My Agent Session
+
+I built FrostWise with an AI coding agent, and I kept it honest the same way the app keeps its forecasts honest: the agent proposed, I verified every claim against a real run before it shipped.
+
+The useful parts of that session, in order:
+
+1. **Research before code.** The agent read the challenge rules, the official template, and two past winning posts, then wrote the "why open beats closed" argument from the prompt's own bullets instead of guessing.
+2. **A feasibility spike first.** Before a line of product code, it proved both models actually run on a plain CPU box: TabPFN-v2 predicting a frost date in about 3 seconds, and `gemma3:1b` answering a planting question offline. Only then did we build.
+3. **Catching my own overclaim.** During review the agent flagged that the dataset is synthetic and made me say so in this post, rather than let "matches real climate norms" imply a live feed. That note is in "How I Built It" now because the agent pushed back.
+4. **Real bugs, found by running it.** A static-path mistake made the UI load blank; a weak `gemma3:270m` ignored the frost date. Both were caught by actually running the thing, not by reading the diff.
+
+The through-line: the agent is fast, but nothing shipped until a real run backed it up. That is the same contract as the product. The model proposes, the evidence decides.
+
 ## Did It Touch Grass?
 
 I ran it for my friend's plot before she planted. FrostWise put her last frost in early May; she waited, set her tomatoes out the week after, and did not lose a single seedling to a late cold night. The screen part took about ten seconds. The rest of the afternoon she was in the dirt. That is the whole idea: the tool gets out of the way and sends you outside.
