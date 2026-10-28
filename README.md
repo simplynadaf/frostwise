@@ -14,7 +14,7 @@
 
 <img src="docs/cover.png" alt="FrostWise: a dark, premium planting-planner interface over a midnight-galaxy background, showing a predicted last-frost date and plain-language planting advice" width="100%"/>
 
-**🔗 Live demo:** [simplynadaf.github.io/frostwise](https://simplynadaf.github.io/frostwise/) &nbsp;·&nbsp; **💻 Run it live:** [Getting Started](#-getting-started) (the full offline models run locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
+**🔗 Live demo:** [simplynadaf.github.io/frostwise](https://simplynadaf.github.io/frostwise/) &nbsp;·&nbsp; **💻 Run it live:** [Getting Started](#-getting-started) (the full offline models run locally) &nbsp;·&nbsp; **🎬 YouTube demo:** [watch it](https://youtu.be/7gHYehieEnQ)
 
 </div>
 
@@ -107,8 +107,9 @@ Both models run on your machine. There is no API key, no account, and no request
 </div>
 
 ### 🎬 Full walkthrough (YouTube)
-A 2-minute demo running three real forecasts (Miami, Chicago, Fargo) fully offline is
-**coming soon**. The source video is in the repo at [`docs/demo.mp4`](docs/demo.mp4).
+A 2-minute demo running three real forecasts (Miami, Chicago, Fargo) fully offline:
+**[watch on YouTube](https://youtu.be/7gHYehieEnQ)**. The source video is also in the repo
+at [`docs/demo.mp4`](docs/demo.mp4).
 
 ---
 
