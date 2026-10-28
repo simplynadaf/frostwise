@@ -14,13 +14,13 @@
 
 <img src="docs/cover.png" alt="FrostWise: a dark, premium planting-planner interface over a midnight-galaxy background, showing a predicted last-frost date and plain-language planting advice" width="100%"/>
 
-**🔗 Live demo:** [d2damz5gbd2rbh.cloudfront.net](https://d2damz5gbd2rbh.cloudfront.net) &nbsp;·&nbsp; **💻 Run it live:** [Getting Started](#-getting-started) (the full offline models run locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
+**🔗 Live demo:** [simplynadaf.github.io/frostwise](https://simplynadaf.github.io/frostwise/) &nbsp;·&nbsp; **💻 Run it live:** [Getting Started](#-getting-started) (the full offline models run locally) &nbsp;·&nbsp; **🎬 YouTube demo:** coming soon
 
 </div>
 
 > [!NOTE]
-> **About the live demo.** The [hosted preview](https://d2damz5gbd2rbh.cloudfront.net) is a
-> static site (S3 + CloudFront) that serves **real, pre-computed** TabPFN-v2 + Gemma results
+> **About the live demo.** The [hosted preview](https://simplynadaf.github.io/frostwise/) is a
+> static site (GitHub Pages) that serves **real, pre-computed** TabPFN-v2 + Gemma results
 > for the preset cities, so you can click through actual model output. The live models
 > themselves run on *your* machine with no server and no internet. For custom climate input,
 > fully offline, clone the repo and run `python run.py`. That is the whole point of FrostWise.
